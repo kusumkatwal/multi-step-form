@@ -1,0 +1,283 @@
+/*
+Storm Gray
+#70738A
+
+Fantasy
+#F8EAEB
+
+French Gray
+#BCBCC9
+
+Cadet Blue
+#B0B4CC*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@200&family=Signika+Negative&display=swap');
+
+body{
+   
+font-family: 'Signika Negative', sans-serif;
+    margin:0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #BCBCC9;
+}
+.body {
+    display: flex;
+    border-radius: 15px;
+    /* box-shadow: 8px 8px 8px 8px #F8EAEB;  */
+    width:80%;
+    height: 700px; 
+}
+/*styling progress bar*/
+.progress {
+    color:#BCBCC9; 
+    background-color: #70738A;
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 700px;
+    position: relative;
+   
+}
+
+.progress-top h3{
+    font-size: 30px;
+    color:white;
+    margin-bottom: 150px;
+}
+
+
+.bar h2 {
+    font-size: 15px;
+    text-align: left;
+    padding-left:30px;
+}
+.bar h2 span{
+    font-size: 15px;
+}
+/*pseudo class to highlight the selected step*/
+.bar_active h2 { 
+    color : white;
+    font-size: 25px;
+}
+
+.bar_active h2 span{ 
+    color : white;
+    font-size: 25px;
+}
+
+.progress-buttom img {
+    height:250px;
+    width:300px;
+    position: absolute;
+    bottom:10px;
+    
+}
+/*styling each step*/
+.step {
+    display: none;
+    color:#70738A;
+    font-style: bold;
+    background-color: #F8EAEB;
+    width:60%;
+    padding-left:60px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 700px;
+    position: relative;
+}
+/*this class is used to show or hide step*/
+.active { 
+    display: block; 
+}
+/*styling form fields*/
+.sub-step {
+    margin-bottom: 15px;
+}
+
+.sub-step h3 {
+    font-size: 25px;
+    text-align: center;
+    margin-top : 30px;
+}
+
+.sub-step label {
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: block;
+
+}
+
+.sub-step input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    width: 85%;
+    margin-bottom: 5px;
+    display: block;
+}
+/*styling error*/
+.sub-step span {
+    color: #7682c4;
+    font-style: italic;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+
+.sub-field {
+    width: 45%;
+
+}
+
+input[type = 'radio'] {
+    padding:0;
+    width:10%;
+}
+
+input[type = 'radio']:checked + label{
+    color : #7682c4;
+}
+
+input[type = 'checkbox']{
+    width: 15px;
+    margin-right:5px;
+    
+}
+
+.checkbox-label {
+    margin:0px 10px;
+}
+
+select {
+    background-color: white;
+    width: 85%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    appearance: none; /* Remove default styles in some browsers */
+    display:block;
+}
+
+select option {
+    padding: 8px;
+}
+
+textarea {
+    width: 85%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/*next button style*/
+
+.next-btn {
+    background-color:#70738A;
+    border-radius: 25px;
+    position: absolute;
+   bottom: 20px;
+   right: 50px;
+    padding: 10px 20px;
+    width: 100px;
+    color: white;
+    border: none;
+}
+
+.next-btn:hover {
+    background-color: #BCBCC9;
+}
+/*previous button style*/
+.prev-btn {
+    background-color:#BCBCC9;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    width: 100px;
+    color: white;
+    border: none;
+}
+
+.prev-btn:hover {
+    background-color: #70738A;
+}
+
+.sub-step p{
+    color:#70738A;
+}
+
+ @media screen and (max-width: 760px) {
+    .body{
+        width:600px;
+        flex-direction: column;
+    }
+    .progress{
+        display: flex;
+        flex-direction: row;
+        width:600px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px ;
+        border-bottom-left-radius: 0px;
+    }
+    .progress-top{
+        flex-direction: column;
+    }
+    .progress-top h3{
+        margin:10px;
+        padding-left: 10px;
+    }
+    .progress-buttom img {
+        display: none;
+    }
+    .bar-bar{
+        padding-left:5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    }
+    .bar h2{
+        padding-left:5px;
+        font-size: 15px;
+    }
+    .bar_active h2{
+        font-size: 17px;
+    }
+    .bar h2 span{
+        font-size: 15px;
+    }
+    .step{
+        width:600px;
+        padding:0;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        min-height: 650px;
+    }
+    .sub-step{
+        padding-left: 15px;
+    }
+    .next-btn .prev-btn{
+      
+         bottom: 50px;   
+    }
+} 

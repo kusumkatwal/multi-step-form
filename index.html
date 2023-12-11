@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="body">
+        <div class="progress">
+
+           <div class="progress-top">
+            <h3>Become our member today!</h3>
+            <div class="bar">
+                <h2><span class="material-symbols-outlined">
+                    contacts_product
+                    </span> Personal Information</h2>
+            </div>
+
+            <div class="bar">
+                <h2><span class="material-symbols-outlined">
+                    card_membership
+                    </span> Membership Details</h2>
+            </div>
+
+            <div class="bar">
+                <h2><span class="material-symbols-outlined">
+                    checklist
+                    </span> Preferences</h2>
+            </div>
+
+            <div class="bar">
+                <h2><span class="material-symbols-outlined">
+                    check
+                    </span>
+                    </span> Confirmation</h2>
+            </div>
+
+
+            <div class="progress-buttom">
+                <img src="./image/books, coffee, tea.jpg">
+            </div>
+           </div>
+
+        </div>
+        <div class="step" id="step1">
+
+            <div class="sub-step">
+                
+                <h3>Personal Information:</h3>
+            </div>
+
+            <div class="sub-step">
+                <label for="name" id="label">Name:</label>
+                <input name="name" type="text" id="name" required />
+                <span id="error1"> </span>
+            </div>
+
+            <div class="sub-step">
+                <label for="dob" id="label">Date of Birth:</label>
+                <input name="dob" type="date" id="dob" />
+                <span id="error2"> </span>
+            </div>
+
+            <div class="sub-step">
+                <label for="gender" id="label">Gender:</label>
+
+                <div class="field">
+                    <input name="gender" type="radio" id="male" value="male" />
+                    <label class="radio-label" for="male">Male</label>
+
+                    <input name="gender" type="radio" id="female" value="female" />
+                    <label class="radio-label" for="female">Female</label>
+
+                    <input name="gender" type="radio" id="other" value="other" />
+                    <label class="radio-label" for="others">Others</label>
+                </div>
+
+                <span id="error3"> </span>
+            </div>
+
+            <div class="sub-step">
+                <div class="field">
+                    <div class="sub-field">
+                        <label for="contact" id="label">Contact No:</label>
+                        <input name="contact" type="number" id="number" />
+                        <span id="error4_1"></span>
+                    </div>
+                    
+
+
+                    <div class="sub-field">
+                        <label for="email" id="label">email:</label>
+                        <input name="contact" type="text" id="email" placeholder="eg: user@example.com"/>
+                        <span id="error4_2"> </span>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="sub-step">
+                
+                <div class="field">
+                    <div class="sub-field">
+                        <label for="city" id="label">City: </label>
+                        <input name="city" type="text" id="city" />
+                        <span id="error5_1"> </span>
+                    </div>
+
+                    <div class="sub-field">
+                        <label for="street" id="label">Street number:</label>
+                        <input name="street" type="number" id="street" />
+                        <span id="error5_2"> </span>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+
+            <div class="sub-step">
+                <label for="occupation">Occupation</label>
+                <input name="occupation" type="text" id="occupation" />
+                <span id="error6"> </span>
+            </div>
+            <div class="sub-step">
+                <button type="button" class="next-btn" onclick='next(0)'>Next</button>
+            </div>
+
+
+        </div>
+
+        <div class="step" id="step2">
+
+            <div class="sub-step">
+                <h3>Membership Details:</h3>
+            </div>
+
+            <div class="sub-step">
+                <label for="type">Membership type:</label>
+                <select name="type" id="type">
+                    <option value="">Select membership type:</option>
+                    <option value="Student">Student</option>
+                    <option value="Adult">Adult</option>
+                    <option value="Senior">Senior</option>
+                </select>
+                <span id="error7"> </span>
+            </div>
+
+            <div class="sub-step">
+                <label for="duration">Membership duration:</label>
+                <select name="duration" id="duration">
+                    <option value="">Select one</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                    <option value="Half-yearly">Half-yearly</option>
+                </select>
+                <span id="error8"> </span>
+            </div>
+
+            <div class="sub-step">
+                <label for="resident">Are you a resident of library's service area?</label>
+
+                <div class="field">
+                    <input name="resident" type="radio" value="yes" id="yes" />
+                    <label class="radio-label" for="yes">Yes</label>
+
+                    <input name="resident" type="radio" value="no" id="no" />
+                    <label class="radio-label" for="no">No</label>
+                </div>
+
+                <span id="error9"> </span>
+            </div>
+
+            <div class="sub-step">
+                <label for="emergency">Emergency Contact:</label>
+                <div class="field">
+                    <div class="sub-field">
+                        <label for="emergency-name">Name:</label>
+                        <input name="emergency-name" type="text" id="e-name" />
+                    </div>
+
+                    <div class="sub-field">
+                        <label for="emergency-number">Contact Number:</label>
+                        <input name="emergency-number" type="number" id="e-num" />
+                    </div>
+                </div>
+
+                <span id="error10.1"> </span>
+                <span id="error10.2"> </span>
+            </div>
+
+            <div class="sub-step">
+                <button class="prev-btn" onclick='previous(1)'>Previous</button>
+                <button class="next-btn" onclick="next(1)">Next</button>
+            </div>
+            </ul>
+        </div>
+
+        <div class="step" id="step3">
+
+            <div class="sub-step">
+                <h3>Additional Information and Preferences: </h3>
+            </div>
+
+            <div class="sub-step">
+                <label>Preferred Book genres: </label><br>
+
+                <div class="field">
+                    <input name="genre" type="checkbox" value="Fiction" />
+                    <label class="checkbox-label" for="genre1">Fiction</label>
+
+                    <input name="genre" type="checkbox" value="Non-fiction" />
+                    <label class="checkbox-label" for="genre2">Non-Fiction</label>
+
+                    <input name="genre" type="checkbox" value="mystery" />
+                    <label class="checkbox-label" for="genre3">Mystery</label>
+
+                    <input name="genre" type="checkbox" value="romance" />
+                    <label class="checkbox-label" for="genre4">Romance</label>
+
+                    <input name="genre" type="checkbox" value="scifi" />
+                    <label class="checkbox-label" for="genre5">Sci-fi</label>
+
+                    <input name="genre" type="checkbox" value="textbooks" />
+                    <label class="checkbox-label" for="genre6">TextBooks</label>
+                </div>
+
+                <span id="error11"> </span>
+            </div>
+
+            <div class="sub-step">
+                <label>Preferred Reading Formats: </label><br>
+
+                <div class="field">
+                    <input name="format" type="checkbox" value="paperback" />
+                    <label class="checkbox-label" for="paperback">PaperBack</label>
+
+                    <input name="format" type="checkbox" value="e-book" />
+                    <label class="checkbox-label" for="ebook">e-book</label>
+
+                    <input name="format" type="checkbox" value="audiobook" />
+                    <label class="checkbox-label" for="audiobook">Audiobook</label>
+
+                    <input name="format" type="checkbox" value="hardback" />
+                    <label class="checkbox-label" for="hardback">Hardback</label>
+                </div>
+
+                <span id="error12"> </span>
+            </div>
+
+            <div class="sub-step">
+                <label>Notification Preferences:</label><br>
+
+                <div class="field">
+                    <input name="notif" type="radio" value="mail" />
+                    <label class="radio-label" for="mail">mail</label>
+
+                    <input name="notif" type="radio" value="sms" />
+                    <label class="radio-label" for="sms">SMS</label>
+
+                    <input name="notif" type="radio" value="email" />
+                    <label class="radio-label" for="email">email</label>
+
+                    <input name="notif" type="radio" value="none" />
+                    <label class="radio-label" for="none">None</label>
+                </div>
+
+                <span id="error13"> </span>
+            </div>
+
+            <div class="sub-step">
+                <label for="accomodation">Any specific requests or accomodation needed?</label>
+                <textarea name="accomodation" type="textarea"></textarea>
+            </div>
+
+            <div class="sub-step">
+                <button class="prev-btn" onclick='previous(2)'>Previous</button>
+                <button type="submit" onclick="next(2)" class="next-btn">Next</button>
+                <!-- <button type="submit" onclick="confirmation()" class="next-btn">Submit</button> -->
+            </div>
+            </ul>
+        </div>
+
+        <div class="step" id="step4">
+            <div class="sub-step">
+                <h3>Your Details</h3>
+            </div>
+            <div class="sub-step">
+                <p id="summary_name">Name: </p>
+                <p id="summary_number">Contact No: </p>
+                <p id="summary_email">Email: </p>
+                <p id="summary_address">Address: </p>
+                <p id="summary_occupation">Occupation: </p>
+            </div>
+
+            <div class="sub-step">
+                <p id="summary_membership">Membership Details: </p>
+                <p id="summary_emergency">Emergency Contact: </p>
+            </div>
+
+            <div class="sub-step">
+                <p id="summary_genres">Genres Selected: </p>
+                <p id="summary_material">Medium Selected: </p>
+                <p id="summary_notification">Notification Form Selected: </p>
+            </div>
+
+            <div class="sub-step">
+                <p id="summary_textarea">Your request: </p>
+            </div>
+
+            <div class="sub-step">
+                <h2 id="submitted"></h2>
+            </div>
+
+            <div class="sub-step">
+                <button type="submit" onclick="submit()" class="next-btn">Submit</button>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
